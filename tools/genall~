@@ -15,7 +15,7 @@
 #    echo "$0: FATAL: TOPDIR is not a directory: $TOPDIR" 1>&2
 #    exit 1
 #fi
-export TOPDIR=/tmp/sts-data
+export TOPDIR=/var/tmp/sts-data-1
 export GENERATORS=/home/kali/Documents/ResearchComputing/GitHub/sts/tools/generators
 
 if [[ ! -d $TOPDIR ]]; then
@@ -31,20 +31,20 @@ for i in BBS CCG LCG MODEXP MS QCG1 QCG2 SHA1 XOR; do
 done
 
 # launch the generators in the background
-# nohup
+# nohup 65536 
 runGen () {
-time $GENERATORS -i 1 1 65536 > $TOPDIR/LCG/LCG-8G.u8 2> $TOPDIR/LCG/LCG.out < /dev/null &
-time $GENERATORS -i 1 2 65536 > $TOPDIR/QCG1/QCG1-8G.u8 2> $TOPDIR/QCG1/QCG1.out < /dev/null &
-time $GENERATORS -i 1 3 65536 > $TOPDIR/QCG2/QCG2-8G.u8 2> $TOPDIR/QCG2/QCG2.out < /dev/null &
-time $GENERATORS -i 1 4 65536 > $TOPDIR/CCG/CCG-8G.u8 2> $TOPDIR/CCG/CCG.out < /dev/null &
-time $GENERATORS -i 1 5 65536 > $TOPDIR/XOR/XOR-8G.u8 2> $TOPDIR/XOR/XOR.out < /dev/null &
-time $GENERATORS -i 1 6 65536 > $TOPDIR/MODEXP/MODEXP-8G.u8 2> $TOPDIR/MODEXP/MODEXP.out < /dev/null &
-time $GENERATORS -i 1 7 65536 > $TOPDIR/BBS/BBS-8G.u8 2> $TOPDIR/BBS/BBS.out < /dev/null &
-time $GENERATORS -i 1 8 65536 > $TOPDIR/MS/MS-8G.u8 2> $TOPDIR/MS/MS.out < /dev/null &
-time $GENERATORS -i 1 9 65536 > $TOPDIR/SHA1/SHA1-8G.u8 2> $TOPDIR/SHA1/SHA1.out < /dev/null &
+	time $GENERATORS -i 1 1 65 > $TOPDIR/LCG/LCG-8G.u8 2> $TOPDIR/LCG/LCG.out < /dev/null &
+ 	time $GENERATORS -i 1 2 65 > $TOPDIR/QCG1/QCG1-8G.u8 2> $TOPDIR/QCG1/QCG1.out < /dev/null &
+ 	time $GENERATORS -i 1 3 65 > $TOPDIR/QCG2/QCG2-8G.u8 2> $TOPDIR/QCG2/QCG2.out < /dev/null &
+ 	time $GENERATORS -i 1 4 65 > $TOPDIR/CCG/CCG-8G.u8 2> $TOPDIR/CCG/CCG.out < /dev/null &
+ 	time $GENERATORS -i 1 5 65 > $TOPDIR/XOR/XOR-8G.u8 2> $TOPDIR/XOR/XOR.out < /dev/null &
+ 	time $GENERATORS -i 1 6 65 > $TOPDIR/MODEXP/MODEXP-8G.u8 2> $TOPDIR/MODEXP/MODEXP.out < /dev/null &
+ 	time $GENERATORS -i 1 7 65 > $TOPDIR/BBS/BBS-8G.u8 2> $TOPDIR/BBS/BBS.out < /dev/null &
+ 	time $GENERATORS -i 1 8 65 > $TOPDIR/MS/MS-8G.u8 2> $TOPDIR/MS/MS.out < /dev/null &
+ 	time $GENERATORS -i 1 9 65 > $TOPDIR/SHA1/SHA1-8G.u8 2> $TOPDIR/SHA1/SHA1.out < /dev/null &
 }
 
-echo "RUNNING: GENERATORS executable: $GENERATORS" 
+echo "$0: NOTICE: RUNNING: GENERATORS executable: $GENERATORS" 1>&2
 runGen
 
 # ... now you wait

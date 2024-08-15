@@ -1,0 +1,51 @@
+./genall: Making TOPDIR directory: /tmp/sts-data-2
+mkdir: created directory '/tmp/sts-data-2'
+mkdir: created directory '/tmp/sts-data-2/BBS'
+mkdir: created directory '/tmp/sts-data-2/CCG'
+mkdir: created directory '/tmp/sts-data-2/LCG'
+mkdir: created directory '/tmp/sts-data-2/MODEXP'
+mkdir: created directory '/tmp/sts-data-2/MS'
+mkdir: created directory '/tmp/sts-data-2/QCG1'
+mkdir: created directory '/tmp/sts-data-2/QCG2'
+mkdir: created directory '/tmp/sts-data-2/SHA1'
+mkdir: created directory '/tmp/sts-data-2/XOR'
+./genall: NOTICE: RUNNING: GENERATORS executable: /home/kali/Documents/ResearchComputing/GitHub/sts/tools/generators
+./genall: NOTICE: 9 generators launched in the background
+./genall: NOTICE: Some of these generators will take a very long time to write 8 Gbytes of data
+./genall: NOTICE: To monitor progress, try this command: tail -f /tmp/sts-data-2/*/*.out
+
+real	12m33.004s
+user	12m31.624s
+sys	0m1.052s
+
+real	12m33.007s
+user	12m31.288s
+sys	0m1.528s
+
+real	12m33.007s
+user	12m29.512s
+sys	0m3.260s
+
+real	12m33.013s
+user	12m30.943s
+sys	0m1.856s
+
+real	12m33.016s
+user	12m31.805s
+sys	0m0.972s
+
+real	12m33.031s
+user	12m31.660s
+sys	0m1.148s
+
+real	12m33.377s
+user	12m32.974s
+sys	0m0.116s
+
+real	12m36.848s
+user	12m36.392s
+sys	0m0.196s
+
+real	12m44.499s
+user	12m43.782s
+sys	0m0.372s
