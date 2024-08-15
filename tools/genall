@@ -16,7 +16,7 @@
 #    exit 1
 #fi
 export TOPDIR=/var/tmp/sts-data-2
-export GENERATORS=/home/kali/Documents/ResearchComputing/GitHub/sts/tools/generators
+export GENERATORS=~/Documents/GitHub/sts/tools/generators
 
 if [[ ! -d $TOPDIR ]]; then
     echo "$0: Making TOPDIR directory: $TOPDIR" 1>&2
